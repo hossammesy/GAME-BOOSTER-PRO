@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GAME BOOSTER PRO</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: linear-gradient(145deg, #0b192c 0%, #142c49 65%, #1e3e62 100%);
+        color: #ffffff;
+        font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        -webkit-app-region: drag;
+      }
+      .frame {
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .brand-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .logo {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        background: #0b192c;
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .title {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: #ffffff;
+      }
+      .subtitle {
+        font-size: 12px;
+        color: #93c5fd;
+        margin-top: 4px;
+      }
+      .progress-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .status-text {
+        font-size: 13px;
+        color: #e2e8f0;
+      }
+      .bar-track {
+        width: 100%;
+        height: 4px;
+        border-radius: 99px;
+        background: rgba(255, 255, 255, 0.12);
+        overflow: hidden;
+      }
+      .bar-fill {
+        width: 45%;
+        height: 100%;
+        border-radius: 99px;
+        background: #38bdf8;
+        animation: slide 1.4s ease-in-out infinite;
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(120%);
+        }
+        100% {
+          transform: translateX(-220%);
+        }
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="brand-row">
+        <div class="logo">
+          <svg width="34" height="34" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 6L54 14V31C54 44.5 44.6 54.4 32 58C19.4 54.4 10 44.5 10 31V14L32 6Z" fill="#1E3E62" stroke="#38BDF8" stroke-width="2.5"/>
+            <path d="M19 41L32 28L45 41" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23 48L32 39L41 48" stroke="#93C5FD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="title" dir="ltr">GAME BOOSTER PRO</div>
+          <div class="subtitle">منصة تحسين الألعاب الآمنة لنظام Windows 11</div>
+        </div>
+      </div>
+
+      <div class="progress-section">
+        <div class="status-text" id="splash-status">جارٍ تهيئة الواجهة وتشغيل الوكيل المحلي...</div>
+        <div class="bar-track">
+          <div class="bar-fill"></div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>إصدار سطح المكتب · Windows x64</span>
+        <span>تشغيل بصلاحيات المستخدم القياسية</span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "GAME BOOSTER PRO",
+  "description": "منصة احترافية لتحسين أداء الألعاب على نظام ويندوز باللغة العربية مع دعم الاتصال بالوكيل المحلي ومراقبة العتاد.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

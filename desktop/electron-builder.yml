@@ -1,0 +1,49 @@
+appId: com.gameboosterpro.desktop
+productName: GAME BOOSTER PRO
+copyright: Copyright © 2026 GAME BOOSTER PRO
+
+directories:
+  buildResources: build
+  output: release
+
+asar: true
+
+files:
+  - dist-electron/**/*
+  - src/splash.html
+  - build/icon.png
+  - build/icon.ico
+  - from: ../dist
+    to: renderer
+    filter:
+      - "**/*"
+
+extraResources:
+  - from: ../WindowsAgent/publish-win-x64
+    to: agent
+    filter:
+      - "**/*"
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.ico
+  requestedExecutionLevel: asInvoker
+  artifactName: GAME_BOOSTER_PRO_Setup.exe
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: GAME BOOSTER PRO
+  uninstallDisplayName: GAME BOOSTER PRO
+  runAfterFinish: true
+  deleteAppDataOnUninstall: false
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  include: installer/installer.nsh
